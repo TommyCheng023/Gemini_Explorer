@@ -15,6 +15,10 @@ model = GenerativeModel(
 )
 chat = model.start_chat()
 
+# initialize chat history - set the messages into an empty array
+if "messages" not in st.session_state:
+    st.session_state.messages = []
+
 # llm_function: display and send streamlit messages
 def llm_function(chat: ChatSession, query):
     response = chat.send_message(query) # define response that sending 'query' over to the ChatSession
@@ -40,10 +44,6 @@ def llm_function(chat: ChatSession, query):
 
 # make a title
 st.title("Gemini Explorer")
-
-# initialize chat history - set the messages into an empty array
-if "messages" not in st.session_state:
-    st.session_state.messages = []
 
 # display and load to chat history
 for index, message in enumerate(st.session_state.messages):
