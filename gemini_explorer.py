@@ -3,8 +3,8 @@ import streamlit as st
 from vertexai.preview import generative_models
 from vertexai.preview.generative_models import GenerativeModel, Part, Content, ChatSession
 
-project = "sample-gemini"
-vertexai.init( project = project)
+project = "gemini-explorer-415722"
+vertexai.init( project = project )
 
 config = generative_models.GenerationConfig( temperature=0.4 )
 
@@ -72,6 +72,7 @@ if query:
     # add role and add the actual session and then call llm_function to append to the chat model
     with st.chat_message("user"):
         st.markdown(query)
-    llm_function(chat, query)
+
+llm_function(chat, query)
 
     
