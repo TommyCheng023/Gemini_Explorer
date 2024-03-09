@@ -3,3 +3,8 @@
 ```sh
 pip install vertexai streamlit
 ```
+
+## Launch The App
+```sh
+streamlit run gemini_explorer.py
+```
