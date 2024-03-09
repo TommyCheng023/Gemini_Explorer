@@ -15,7 +15,6 @@ model = GenerativeModel(
 )
 chat = model.start_chat()
 
-
 # llm_function: display and send streamlit messages
 def llm_function(chat: ChatSession, query):
     response = chat.send_message(query) # define response that sending 'query' over to the ChatSession
@@ -47,16 +46,17 @@ if "messages" not in st.session_state:
     st.session_state.messages = []
 
 # display and load to chat history
-if st.session_state.messages:
-    for index, message in enumerate(st.session_state.messages):
-        # create a variable holding Content class with two parameters "role" and "parts", corresponding to "role" and "content" in 'session_state'
-        content = Content(
-                role = message["role"],                             # store as a string
-                parts = [ Part.from_text(message["content"]) ]      # store multiple things as an array
-            )
+for index, message in enumerate(st.session_state.messages):
+    # create a variable holding Content class with two parameters "role" and "parts", corresponding to "role" and "content" in 'session_state'
+    content = Content(
+            role = message["role"],                             # store as a string
+            parts = [ Part.from_text(message["content"]) ]      # store multiple things as an array
+        )
+    if index != 0:
         with st.chat_message(message["role"]):
             st.markdown(message["content"])
-        chat.history.append(content)  # append to make it a multiturned conversation with a 'user' role followed by a 'model' role [gcloud flavor]
+
+    chat.history.append(content)  # append to make it a multiturned conversation with a 'user' role followed by a 'model' role [gcloud flavor]
 
 # initial message startup
 if len(st.session_state.messages) == 0:
@@ -64,7 +64,7 @@ if len(st.session_state.messages) == 0:
     llm_function(chat, initial_prompt)
 
 # capture user input
-query = st.chat_input("Gemini Flights")
+query = st.chat_input("Gemini Explorer")
 
 if query:
     # case: an input is coming
@@ -72,7 +72,6 @@ if query:
     # add role and add the actual session and then call llm_function to append to the chat model
     with st.chat_message("user"):
         st.markdown(query)
-
-llm_function(chat, query)
+    llm_function(chat, query)
 
     
