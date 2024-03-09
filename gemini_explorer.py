@@ -47,16 +47,16 @@ if "messages" not in st.session_state:
     st.session_state.messages = []
 
 # display and load to chat history
-for index, message in enumerate(st.session_state.messages):
-    # create a variable holding Content class with two parameters "role" and "parts", corresponding to "role" and "content" in 'session_state'
-    content = Content(
-            role = message["role"],                             # store as a string
-            parts = [ Part.from_text(message["content"]) ]      # store multiple things as an array
-        )
-    if index != 0:
+if st.session_state.messages:
+    for index, message in enumerate(st.session_state.messages):
+        # create a variable holding Content class with two parameters "role" and "parts", corresponding to "role" and "content" in 'session_state'
+        content = Content(
+                role = message["role"],                             # store as a string
+                parts = [ Part.from_text(message["content"]) ]      # store multiple things as an array
+            )
         with st.chat_message(message["role"]):
             st.markdown(message["content"])
-    chat.history.append(content)  # append to make it a multiturned conversation with a 'user' role followed by a 'model' role [gcloud flavor]
+        chat.history.append(content)  # append to make it a multiturned conversation with a 'user' role followed by a 'model' role [gcloud flavor]
 
 # initial message startup
 if len(st.session_state.messages) == 0:
