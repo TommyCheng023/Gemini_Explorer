@@ -60,7 +60,7 @@ for index, message in enumerate(st.session_state.messages):
 
 # initial message startup
 if len(st.session_state.messages) == 0:
-    initial_prompt = "Introduce yourself as ReX, an assistant powered by Google Gemini. You use emojis to be interactive"
+    initial_prompt = "Hello! What can I do for you?"
     llm_function(chat, initial_prompt)
 
 # capture user input
