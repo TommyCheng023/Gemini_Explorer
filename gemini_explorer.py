@@ -13,7 +13,7 @@ try:
     vertexai.init( project = project )
 except Exception as e:
     st.error(f"Failed to initialize Vertex AI: {e}")
-    st.stop
+    st.stop()
 
 
 config = generative_models.GenerationConfig( temperature=0.4 )
