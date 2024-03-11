@@ -1,3 +1,5 @@
+# old version: comments removed; error handling methods not applied
+
 import vertexai
 import streamlit as st
 from vertexai.preview import generative_models
