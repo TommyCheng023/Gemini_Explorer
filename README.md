@@ -11,7 +11,7 @@ https://github.com/TommyCheng023/Gemini_Explorer/assets/115842289/154ec337-cbb9-
 2. Initialize Google Cloud
 3. Setup Google Gemini
 4. Streamlit Integration
-5. Add Initial Message
+5. Enhance Personality
 
 ## 0. Basic Setup
 ### [Visual Studio Code](https://code.visualstudio.com/)
