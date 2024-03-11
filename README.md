@@ -54,8 +54,12 @@ streamlit hello
 * write a helper function
   * `llm_function`: a function used to display and send streamlit messages
 ## 5. Add Initial Message
-* let the AI speaks first
-  * simply define a `String` containing an initial prompt and pass it into the `llm_function`
+### Initial Prompt
+This is something you can **define** your chatbot. Including what you want it to be called, what its style of chatting is going to be. All those requirements can be included in a string. 
+
+Check it out on Google Cloud by following: `Vertex AI->Language->Text Chat->select model->chat-bison(latest)`, and try it yourself!
+<img width="863" alt="Screen Shot 2024-03-11 at 12 52 35 PM" src="https://github.com/TommyCheng023/Gemini_Explorer/assets/115842289/e38e2e78-ec35-42df-ab22-ce3174cea9a1">
+
 ## Launch The App
 ```sh
 streamlit run gemini_explorer.py
