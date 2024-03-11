@@ -4,6 +4,8 @@ import vertexai
 import streamlit as st
 from vertexai.preview import generative_models
 from vertexai.preview.generative_models import GenerativeModel, Part, Content, ChatSession
+import os
+os.environ['GRPC_DNS_RESOLVER'] = 'native'
 
 project = "gemini-explorer-415722"
 vertexai.init( project = project )
