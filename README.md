@@ -62,7 +62,7 @@ streamlit run gemini_explorer.py
 ```
 ## Appendix
 ### Appreciation
-* Thanks for RadicalX providing such a precious experience on AI engineering.
+* Appreciate Radical AI for providing such a precious experience on AI engineering.
 * I also want to show my gratitude to Talha Sabri and Mikhail Ocampo for detailed instructions. :)
 
 ### About Contributors
