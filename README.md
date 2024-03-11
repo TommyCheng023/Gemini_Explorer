@@ -1,7 +1,8 @@
 # Gemini_Explorer
 ## Description
-A Streamlit APP of an AI chat interface taking `Gemini` as an API accessed by a personal Google Cloud account. 
-## Demo Video
+* A chat interface using `Streamlit` to integrate with Google's cutting-edge large language model, `Gemini`, providing an accessible platform to explore and demonstrate the capabilities of advanced language model applications.
+* This project aims to serve as <ins>an educational and practical introduction</ins> to the fusion of large language models and user-friendly interfaces.
+## Demo
 <ins>coming soon</ins>
 
 ## Tutorial - Content
@@ -53,12 +54,29 @@ streamlit hello
 ## 4. Streamlit Integration
 * write a helper function
   * `llm_function`: a function used to display and send streamlit messages
+<img width="785" alt="Screen Shot 2024-03-11 at 5 38 13 PM" src="https://github.com/TommyCheng023/Gemini_Explorer/assets/115842289/8139eecd-633a-4de1-a5db-f34ba95304ec">
+
+### Common Issue With Solutions
+1. Any Runtime Error
+solution: insert error-handling structures can avoid crashing your computer
+```sh
+try:
+    # your code
+except Exception as e:
+    st.error(f"Issue Failed: {e}")
+    st.stop()
+```
+2. Failed to send message or receive response: 503 DNS resolution failed for us-central1-aiplatform.googleapis.com:443: C-ares status is not ARES_SUCCESS qtype=SRV name=_grpclb._tcp.us-central1-aiplatform.googleapis.com: Timeout while contacting DNS servers
+```sh
+import os
+os.environ['GRPC_DNS_RESOLVER'] = 'native'
+```
 ## 5. Add Initial Message
 ### Initial Prompt
 This is something you can **define** your chatbot. Including what you want it to be called, what its style of chatting is going to be. All those requirements can be included in a string. 
 
 Check it out on Google Cloud by following: `Vertex AI->Language->Text Chat->select model->chat-bison(latest)`, and try it yourself!
-<img width="863" alt="Screen Shot 2024-03-11 at 12 52 35 PM" src="https://github.com/TommyCheng023/Gemini_Explorer/assets/115842289/e38e2e78-ec35-42df-ab22-ce3174cea9a1">
+<img width="1720" alt="Screen Shot 2024-03-11 at 2 09 51 PM" src="https://github.com/TommyCheng023/Gemini_Explorer/assets/115842289/978a6dc8-626a-4cbe-ba58-d86b805893de">
 
 ## Launch The App
 ```sh
