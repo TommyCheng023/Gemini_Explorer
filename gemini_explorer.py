@@ -6,6 +6,7 @@ import vertexai
 import streamlit as st
 from vertexai.preview import generative_models
 from vertexai.preview.generative_models import GenerativeModel, Part, Content, ChatSession
+import os
 
 project = "gemini-explorer-415722"
 
