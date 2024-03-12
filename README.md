@@ -22,12 +22,15 @@ make sure that your version is above 3.11
 install this extension to connect your Google Cloud project
 
 ## 1. Enable Google Cloud
+[Start](https://console.cloud.google.com/)
+
 follow the instructions [here](https://cloud.google.com/cloud-console?utm_source=google&utm_medium=cpc&utm_campaign=na-US-all-en-dr-bkws-all-all-trial-e-dr-1707554&utm_content=text-ad-none-any-DEV_c-CRE_665735422256-ADGP_Hybrid%20%7C%20BKWS%20-%20MIX%20%7C%20Txt-Management%20Tools-Cloud%20Console-KWID_43700077225654741-kwd-55675752867&utm_term=KW_google%20cloud%20console-ST_google%20cloud%20console&gad_source=1&gclid=Cj0KCQiArrCvBhCNARIsAOkAGcXO2_affz2IH9q_ps1LDwrdsOe43AmOiJps1j9UK_ri0mnBWRd9eA0aApkNEALw_wcB&gclsrc=aw.ds)
 
 ## 2. Initialize Google Cloud
 * setup the API server
-* a virtual environment is recommended
-* initialize SDK by typing the following command into the terminal
+<img width="1497" alt="Screen Shot 2024-03-12 at 12 33 03 PM" src="https://github.com/TommyCheng023/Gemini_Explorer/assets/115842289/c2fcfcd3-e879-458d-8fa7-90d6d4853cde">
+
+* install and initialize SDK by typing the following command into the terminal
 ```sh
 gcloud init
 ```
