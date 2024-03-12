@@ -108,3 +108,4 @@ streamlit run gemini_explorer.py
 * Xinyang(Tommy) Cheng
   * Personal Website: [About - Xinyang Cheng](https://tommycheng023.github.io/)
   * LinkedIn Profile: [Xinyang(Tommy) Cheng](www.linkedin.com/in/xinyang-cheng-325825260)
+* [Project Report](https://www.loom.com/share/7908a19af79947acb34437baae798e81?sid=e0a07ad6-b9c0-4477-a010-67b5f2722dfe)
