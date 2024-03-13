@@ -103,12 +103,15 @@ os.environ['GRPC_DNS_RESOLVER'] = 'native'
 streamlit run gemini_explorer.py
 ```
 ## Appendix
+### Project Certificate
+<img width="1011" alt="Screen Shot 2024-03-13 at 12 50 06 PM" src="https://github.com/TommyCheng023/Gemini_Explorer/assets/115842289/7d139497-0afe-47de-9a5a-98c6a9abfea0">
+
 ### Appreciation
 * Appreciate Radical AI for providing such a precious experience on AI engineering.
 * I also want to show my gratitude to Talha Sabri and Mikhail Ocampo for detailed instructions. :)
-
+### [Project Report](https://www.loom.com/share/7908a19af79947acb34437baae798e81?sid=e0a07ad6-b9c0-4477-a010-67b5f2722dfe)
 ### About Contributors
 * Xinyang(Tommy) Cheng
   * Personal Website: [About - Xinyang Cheng](https://tommycheng023.github.io/)
   * LinkedIn Profile: [Xinyang(Tommy) Cheng](www.linkedin.com/in/xinyang-cheng-325825260)
-* [Project Report](https://www.loom.com/share/7908a19af79947acb34437baae798e81?sid=e0a07ad6-b9c0-4477-a010-67b5f2722dfe)
+
