@@ -48,7 +48,7 @@ pip install vertexai
 ```
 
 * initialize vertexai project
-```sh
+```python
 import vertexai
 from vertexai.preview import generative_models
 from vertexai.preview.generative_models import GenerativeModel, Part, Content, ChatSession
@@ -56,7 +56,7 @@ project = "your-project-ID"
 vertexai.init( project = project )
 ```
 * create config and load model
-```sh
+```python
 config = generative_models.GenerationConfig( # add attributes you need )
 model = GenerativeModel ( "gemini-pro", generation_config = config )
 chat = model.start_chat()
@@ -67,7 +67,7 @@ chat = model.start_chat()
 pip install streamlit
 ```
 * import package
-```sh
+```python
 import streamlit as st
 ```
 * [Streamlit Guide](https://docs.streamlit.io/get-started)
@@ -80,7 +80,7 @@ import streamlit as st
 ### Common Issue With Solutions
 1. Any Runtime Error
 solution: insert error-handling structures can avoid crashing your computer
-```sh
+```python
 try:
     # your code
 except Exception as e:
@@ -88,7 +88,7 @@ except Exception as e:
     st.stop()
 ```
 2. Failed to send message or receive response: 503 DNS resolution failed for us-central1-aiplatform.googleapis.com:443: C-ares status is not ARES_SUCCESS qtype=SRV name=_grpclb._tcp.us-central1-aiplatform.googleapis.com: Timeout while contacting DNS servers
-```sh
+```python
 import os
 os.environ['GRPC_DNS_RESOLVER'] = 'native'
 ```
@@ -99,7 +99,7 @@ os.environ['GRPC_DNS_RESOLVER'] = 'native'
 <img width="1720" alt="Screen Shot 2024-03-11 at 2 09 51 PM" src="https://github.com/TommyCheng023/Gemini_Explorer/assets/115842289/978a6dc8-626a-4cbe-ba58-d86b805893de">
 
 ## Launch The App
-```sh
+```zsh
 streamlit run gemini_explorer.py
 ```
 ## Appendix
@@ -111,7 +111,7 @@ streamlit run gemini_explorer.py
 * I also want to show my gratitude to Talha Sabri and Mikhail Ocampo for detailed instructions. :)
 ### [Project Report](https://www.loom.com/share/7908a19af79947acb34437baae798e81?sid=e0a07ad6-b9c0-4477-a010-67b5f2722dfe)
 ### About Contributors
-* Xinyang(Tommy) Cheng
-  * Personal Website: [About - Xinyang Cheng](https://tommycheng023.github.io/)
-  * LinkedIn Profile: [Xinyang(Tommy) Cheng](www.linkedin.com/in/xinyang-cheng-325825260)
+- Xinyang(Tommy) Cheng
+  - Personal Website: [About - Xinyang Cheng](https://tommycheng023.github.io/)
+  - LinkedIn Profile: [Xinyang(Tommy) Cheng](www.linkedin.com/in/xinyang-cheng-325825260)
 
