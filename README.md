@@ -1,7 +1,7 @@
 # Gemini_Explorer
 ## Description
 * A chat interface using `Streamlit` to integrate with Google's cutting-edge large language model, `Gemini`, providing an accessible platform to explore and demonstrate the capabilities of advanced language model applications.
-* This project aims to serve as <ins>an educational and practical introduction</ins> to the fusion of large language models and user-friendly interfaces.
+
 ## Demo
 https://github.com/TommyCheng023/Gemini_Explorer/assets/115842289/154ec337-cbb9-4028-9334-1ca22a3f62e5
 
