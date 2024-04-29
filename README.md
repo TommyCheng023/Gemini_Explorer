@@ -1,7 +1,7 @@
 # Gemini_Explorer
 ## Description
 * A chat interface using `Streamlit` to integrate with Google's cutting-edge large language model, `Gemini`, providing an accessible platform to explore and demonstrate the capabilities of advanced language model applications.
-* This project aims to serve as <ins>an educational and practical introduction</ins> to the fusion of large language models and user-friendly interfaces.
+
 ## Demo
 https://github.com/TommyCheng023/Gemini_Explorer/assets/115842289/154ec337-cbb9-4028-9334-1ca22a3f62e5
 
@@ -22,12 +22,15 @@ make sure that your version is above 3.11
 install this extension to connect your Google Cloud project
 
 ## 1. Enable Google Cloud
+[Start](https://console.cloud.google.com/)
+
 follow the instructions [here](https://cloud.google.com/cloud-console?utm_source=google&utm_medium=cpc&utm_campaign=na-US-all-en-dr-bkws-all-all-trial-e-dr-1707554&utm_content=text-ad-none-any-DEV_c-CRE_665735422256-ADGP_Hybrid%20%7C%20BKWS%20-%20MIX%20%7C%20Txt-Management%20Tools-Cloud%20Console-KWID_43700077225654741-kwd-55675752867&utm_term=KW_google%20cloud%20console-ST_google%20cloud%20console&gad_source=1&gclid=Cj0KCQiArrCvBhCNARIsAOkAGcXO2_affz2IH9q_ps1LDwrdsOe43AmOiJps1j9UK_ri0mnBWRd9eA0aApkNEALw_wcB&gclsrc=aw.ds)
 
 ## 2. Initialize Google Cloud
 * setup the API server
-* a virtual environment is recommended
-* initialize SDK by typing the following command into the terminal
+<img width="1497" alt="Screen Shot 2024-03-12 at 12 33 03 PM" src="https://github.com/TommyCheng023/Gemini_Explorer/assets/115842289/c2fcfcd3-e879-458d-8fa7-90d6d4853cde">
+
+* install and initialize SDK by typing the following command into the terminal
 ```sh
 gcloud init
 ```
@@ -45,7 +48,7 @@ pip install vertexai
 ```
 
 * initialize vertexai project
-```sh
+```python
 import vertexai
 from vertexai.preview import generative_models
 from vertexai.preview.generative_models import GenerativeModel, Part, Content, ChatSession
@@ -53,7 +56,7 @@ project = "your-project-ID"
 vertexai.init( project = project )
 ```
 * create config and load model
-```sh
+```python
 config = generative_models.GenerationConfig( # add attributes you need )
 model = GenerativeModel ( "gemini-pro", generation_config = config )
 chat = model.start_chat()
@@ -64,7 +67,7 @@ chat = model.start_chat()
 pip install streamlit
 ```
 * import package
-```sh
+```python
 import streamlit as st
 ```
 * [Streamlit Guide](https://docs.streamlit.io/get-started)
@@ -77,7 +80,7 @@ import streamlit as st
 ### Common Issue With Solutions
 1. Any Runtime Error
 solution: insert error-handling structures can avoid crashing your computer
-```sh
+```python
 try:
     # your code
 except Exception as e:
@@ -85,7 +88,7 @@ except Exception as e:
     st.stop()
 ```
 2. Failed to send message or receive response: 503 DNS resolution failed for us-central1-aiplatform.googleapis.com:443: C-ares status is not ARES_SUCCESS qtype=SRV name=_grpclb._tcp.us-central1-aiplatform.googleapis.com: Timeout while contacting DNS servers
-```sh
+```python
 import os
 os.environ['GRPC_DNS_RESOLVER'] = 'native'
 ```
@@ -96,15 +99,21 @@ os.environ['GRPC_DNS_RESOLVER'] = 'native'
 <img width="1720" alt="Screen Shot 2024-03-11 at 2 09 51 PM" src="https://github.com/TommyCheng023/Gemini_Explorer/assets/115842289/978a6dc8-626a-4cbe-ba58-d86b805893de">
 
 ## Launch The App
-```sh
+```zsh
 streamlit run gemini_explorer.py
 ```
 ## Appendix
+### Project Certificate
+<img width="1011" alt="Screen Shot 2024-03-13 at 12 50 06 PM" src="https://github.com/TommyCheng023/Gemini_Explorer/assets/115842289/7d139497-0afe-47de-9a5a-98c6a9abfea0">
+
+### Project Report
+[Loom Video](https://www.loom.com/share/7908a19af79947acb34437baae798e81?sid=e0a07ad6-b9c0-4477-a010-67b5f2722dfe)
+
 ### Appreciation
 * Appreciate Radical AI for providing such a precious experience on AI engineering.
 * I also want to show my gratitude to Talha Sabri and Mikhail Ocampo for detailed instructions. :)
-
 ### About Contributors
-* Xinyang(Tommy) Cheng
-  * Personal Website: [About - Xinyang Cheng](https://tommycheng023.github.io/)
-  * LinkedIn Profile: [Xinyang(Tommy) Cheng](www.linkedin.com/in/xinyang-cheng-325825260)
+- Xinyang(Tommy) Cheng
+  - Personal Website: [About - Xinyang Cheng](https://tommycheng023.github.io/)
+  - LinkedIn Profile: [Xinyang(Tommy) Cheng](www.linkedin.com/in/xinyang-cheng-325825260)
+
